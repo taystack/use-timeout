@@ -1,0 +1,8 @@
+{
+  "short_name": "@taystack/use-timeout",
+  "name": "@taystack/use-timeout",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
