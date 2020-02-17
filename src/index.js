@@ -22,10 +22,6 @@ export default function useTransitionTimeout(milliseconds, trigger = false) {
   // Track the timeout pointer used in in case we need to unmount before timeout is complete
   const [arbitraryTimeout, setArbitraryTimeout] = useState();
 
-  // useEffect(() => {
-  //   init();
-  // }, []);
-
   // Do this on load;
   // Observe the optional trigger to reset done state
   useEffect(() => {
@@ -33,6 +29,10 @@ export default function useTransitionTimeout(milliseconds, trigger = false) {
     init();
     return () => unload();
   }, [trigger]);
+
+  useEffect(() => {
+    return () => unload();
+  }, []);
 
   // Provide method for unmounting
   function unload() { setArbitraryTimeout(clearTimeout(arbitraryTimeout)); }
@@ -52,6 +52,7 @@ export default function useTransitionTimeout(milliseconds, trigger = false) {
       // Clean up
       unload();
     }, milliseconds));
+
   }
 
   return [done, init, unload];
