@@ -1,6 +1,6 @@
 {
   "name": "@taystack/use-timeout",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get a boolean value after an arbitrary timeout. Useful for rendering mounting components.",
   "author": "taystack",
   "license": "MIT",

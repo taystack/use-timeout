@@ -11,21 +11,26 @@ yarn add @taystack/use-timeout
 ```
 
 ## Usage
+The most basic use case here was to provide a hook for a loaded component.
+In the example below, <Example /> will appear gradually.
+Any time Example.props.show changes, we reset the timeout for the next time
+
 
 ```jsx
-import React from "react"
+import React from "react";
 
-import useTimeout from "@taystack/use-timeout"
+import useTimeout from "@taystack/use-timeout";
 
-const Example = () => {
 
-  const [isDone, startTimeout, onUnmount] = useTransitionTimeout(100);
+const Example = ({ show }) => {
+
+  const [isDone, startTimeout, onUnmount] = useTransitionTimeout(100, show);
   // [false, fn, fn];
   // 100ms later
   // [true, fn, fn];
 
   const styles = {
-    opacity: isDone ? 1 : 0,
+    opacity: show ? isDone ? 1 : 0 : 0,
     transition: "opacity 150ms",
   };
 
