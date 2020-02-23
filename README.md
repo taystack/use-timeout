@@ -2,7 +2,8 @@
 
 > Get a boolean value after an arbitrary timeout. Useful for rendering mounting components.
 
-[![NPM](https://img.shields.io/npm/v/@taystack/use-timeout.svg)](https://www.npmjs.com/package/@taystack/use-timeout) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![UseTimeout](https://github.com/taystack/use-timeout/blob/master/logo.png?raw=true)
+[![NPM](https://img.shields.io/npm/v/@taystack/use-timeout.svg)](https://www.npmjs.com/package/@taystack/use-timeout) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![codecov](https://codecov.io/gh/taystack/use-timeout/branch/master/graph/badge.svg)](https://codecov.io/gh/taystack/use-timeout)
 
 ## Install
 
